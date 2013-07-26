@@ -3,8 +3,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<bean id="personHelper" class="spring.core.beans.PersonHelper">
+		<property name="person" ref="employee"/>
+	</bean>
+
 	<bean id="student" class="spring.core.beans.Student">
 		<property name="name" value="James"/>
+	</bean>
+
+	<bean id="employee" class="spring.core.beans.Employee">
+		<property name="name" value="Adam"/>
 	</bean>
 
 </beans>
