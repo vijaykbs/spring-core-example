@@ -3,3 +3,10 @@ target/
 .project
 .classpath
 .springBeans
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
