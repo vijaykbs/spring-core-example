@@ -15,4 +15,14 @@
 		<property name="name" value="Adam"/>
 	</bean>
 
+	<bean id="personAOPService" class="spring.core.aop.PersonAOPService"/>
+	
+	<bean id="personHelperProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="personHelper"/>
+		<property name="interceptorNames">
+			<list>
+				<value>personAOPService</value>
+			</list>
+		</property>
+	</bean>
 </beans>
